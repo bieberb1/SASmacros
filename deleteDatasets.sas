@@ -17,7 +17,7 @@
 
 
 %macro deleteDatasets(dsnList= /*List of datasets, can include ':'*/, lib=WORK /*library, default=WORK*/);
-	proc datasets lib=&lib. nolist;
+	proc datasets lib=&lib. nolist nodetails;
 		delete &dsnList.;
 	quit;
 %mend deleteDatasets;

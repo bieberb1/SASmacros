@@ -14,8 +14,8 @@
 	%getThePath();
 	options noxwait xsync;
 	%if %length(&suff.) > 0 %then %do;
-		x md "&path.\&suff."; *Ensure folder is available;
+		x md "&pathSvr.\&suff."; *Ensure folder is available;
 	%end;
-	x cd "&path.\&suff.";
+	x cd "&pathSvr.\&suff.";
 	options noxwait;
 %mend changeDir;
